@@ -1,7 +1,6 @@
 package main
 
 import (
-	"log"
 	"net/http"
 	"os"
 	"strconv"
@@ -22,12 +21,8 @@ func codeFromPath(p string) int {
 }
 
 func main() {
-	log.SetFlags(0)
-
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		statusCode := codeFromPath(r.URL.Path)
-
-		log.Printf("path=%q host=%q remote=%q status=%d\n", r.URL.Path, r.Host, r.RemoteAddr, statusCode)
 
 		w.WriteHeader(statusCode)
 	})
