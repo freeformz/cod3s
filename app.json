@@ -1,0 +1,11 @@
+{
+  "name": "HTTP codes",
+  "description": "This app returns the http code asked for in the url",
+  "keywords": [ "useless", "hack", "devops" ],
+  "repository": "https://github.com/freeformz/cod3s",
+  "success_url": "/200",
+  "env": {
+    "BUILDPACK_URL" : "https://github.com/heroku/heroku-buildpack-go.git"
+  }
+}
+
